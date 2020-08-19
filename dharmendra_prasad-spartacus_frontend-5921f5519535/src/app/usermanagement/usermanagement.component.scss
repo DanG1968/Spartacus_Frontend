@@ -1,0 +1,31 @@
+ button{
+    margin: 10px;
+ }
+
+ .nav-tabs li{
+    border-radius: unset;
+    padding:10px;
+    margin-bottom:0px;
+ }
+
+ li.active{
+     background-color: #3D85C6;
+ }
+
+ .active a{
+    color: white;
+}
+
+table {
+    border-top: 4px solid #3D85C6 ;
+}
+
+.usermgmt-tab{
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.btn-primary{
+    background: #3D85C6;
+  }

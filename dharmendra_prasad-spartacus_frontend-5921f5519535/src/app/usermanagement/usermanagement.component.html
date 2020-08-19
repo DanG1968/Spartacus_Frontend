@@ -1,0 +1,20 @@
+<div class="container usermgmt-tab">
+  <div class="row">
+    <div class="col-sm-12 ">
+      <ul class="nav nav-tabs nav-justified">
+        <li [class]="tab==='users' ? 'active': 'default'"><a data-toggle="tab" href="#users" (click)="selectedTab('users')">USERS</a></li>
+        <li [class]="tab==='access' ? 'active': 'default'"><a data-toggle="tab" href="#access" (click)="selectedTab('access')">VIEWS
+            AND ACCESS</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="users" class="tab-pane fade in active show">
+          <app-usermgmt></app-usermgmt>
+        </div>
+        <div id="access" class="tab-pane fade">
+          <app-accessmgmt></app-accessmgmt>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

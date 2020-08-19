@@ -1,0 +1,34 @@
+<nav>
+  <ul>
+    <li *ngIf="isVisible('Dashboard')">
+      <a routerLink="/dashboard" class="dashboardClass" [class.activated]="currentUrl == '/'">
+        <i class="material-icons">dashboard</i>
+        <label  class="label">Dashboard</label>
+      </a>
+    </li>
+    <li *ngIf="isVisible('Collections')">
+      <a routerLink="/collections" class="collectionClass" [class.activated]="currentUrl == '/collections'">
+        <i class="material-icons">collections_bookmark</i>
+        <label class="label">Collections</label>
+      </a>
+    </li>
+    <li *ngIf="isVisible('Billing')">
+      <a routerLink="/billing" class="billingClass" [class.activated]="currentUrl == '/billing'">
+        <i class="material-icons">class</i>
+        <label class="label">Billing</label>
+      </a>
+    </li>
+    <li *ngIf="isVisible('Application Settings')">
+      <a routerLink="/applicationsettings" class="applicationSettingsClass" [class.activated]="currentUrl == '/applicationsettings'">
+        <i class="material-icons">perm_data_setting</i>
+        <label class="label">Application Settings</label>
+      </a>
+    </li>
+    <li *ngIf="isVisible('User List Management')">
+      <a routerLink="/usermanagement" class="dummyClass" [class.activated]="currentUrl == '/usermanagement'">
+        <i class="material-icons">assignment_ind</i>
+        <label class="label">User Management</label>
+      </a>
+    </li>
+  </ul>
+</nav>

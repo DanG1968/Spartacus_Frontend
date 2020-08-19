@@ -1,0 +1,34 @@
+<form (ngSubmit)="onSubmit()">
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th></th>
+        <th>User</th>
+        <th>Role</th>
+        <th>Team</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let userIndex = index" (click)="selectRow(user)" [ngClass]="user === selectedUser ? 'selectedRow':'unselectedRow'">
+        <td><button class="btn btn-danger" (click)="deleteUser(user)">X</button></td>
+        <td>{{user.username}}</td>
+        <td>
+          <select (change)="changedRole($event, userIndex)">  
+            <option *ngFor="let role of user.roles; let roleIndex = index" [ngValue]="role" [selected]="role.selected" ><label>{{role.name}}</label></option>
+          </select>
+        </td>
+        <td>
+            <select (change)="changedTeam($event, userIndex)">
+                <option *ngFor="let team of user.teams; let teamIndex = index" [ngValue]="team"  [selected]="team.selected" ><label>{{team.name}}</label></option>
+              </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="row">
+    <div class="col-sm-12">
+      <button type="submit" class="btn btn-primary float-right">SAVE CHANGES</button>
+      <button class="btn btn-primary float-right" (click)="openAddUserModal()">ADD USER</button>
+    </div>
+  </div>
+</form>

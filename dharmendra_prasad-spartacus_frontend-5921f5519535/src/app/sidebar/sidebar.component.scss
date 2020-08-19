@@ -1,0 +1,30 @@
+nav {
+  background: #0B5394;
+  height: 100%;
+  width: 100px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 5px 10px 5px 10px;
+      }
+      .activated {
+        background-color: #3D85C6;
+      }
+      .label{
+        font-family: Arial;
+        display: grid;
+        font-size: 14px;
+      }
+      .material-icons{
+        font-size: 32px;
+      }
+    }
+  }
+}
